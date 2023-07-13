@@ -1,0 +1,65 @@
+.nav{
+    padding: 60px 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+.nav-button button {
+  font-size: 16px;
+  --border-width: 2px;
+  --border-radius: 22px;
+  --color-1: #7353E5;
+  --color-2: #CE4DA4;
+   color: #ddd;
+  position: relative;
+  background: linear-gradient(to right,#7353E5, #CE4DA4),
+    linear-gradient(to right, #7353E5, #CE4DA4);
+  background-position: var(--border-radius) 0, var(--border-radius) 100%;
+  background-repeat: no-repeat;
+  background-size: calc(100% - var(--border-radius) - var(--border-radius))
+    var(--border-width);
+  border-radius: var(--border-radius);
+  padding: 14px 25px;
+  border: none;
+}
+
+.nav-button button:before,
+.nav-button button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: var(--border-radius);
+  top: 0;
+  bottom: 0;
+}
+
+.nav-button button:before {
+  left: 2px;
+  border: var(--border-width) solid var(--color-1);
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  border-right-color: transparent;
+}
+
+.nav-button button:after {
+  right: 2px;
+  border: var(--border-width) solid var(--color-2);
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  border-left-color: transparent;
+}
+
+
+@media only screen and (max-width: 550px) {
+  .nav{
+    padding:50px 20px;
+  }
+}
+
+
+@media only screen and (max-width: 472px) {
+  .nav{
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+}

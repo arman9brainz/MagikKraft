@@ -1,0 +1,95 @@
+.video-Title{
+    --border-width: 2px;
+    --border-radius: 50px;
+    --color-1: #7353E5;
+    --color-2: #CE4DA4;
+     color: #ddd;
+    position: relative;
+    background: linear-gradient(to right,#7353E5, #CE4DA4),
+      linear-gradient(to right, #7353E5, #CE4DA4);
+    background-position: var(--border-radius) 0, var(--border-radius) 100%;
+    background-repeat: no-repeat;
+    background-size: calc(100% - var(--border-radius) - var(--border-radius))
+      var(--border-width);
+    border-radius: var(--border-radius);
+  }
+  
+  .video-Title:before,
+  .video-Title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: var(--border-radius);
+  top: 0;
+  bottom: 0;
+}
+
+.video-Title:before {
+  left: 2px;
+  border: var(--border-width) solid var(--color-1);
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  border-right-color: transparent;
+}
+
+.video-Title:after {
+  right: 2px;
+  border: var(--border-width) solid var(--color-2);
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  border-left-color: transparent;
+}
+  .video-detailes{
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+  }
+  .video-Title{
+    margin: 0px auto;
+    display: flex;
+    padding: 20px 30px;
+    align-items: center;
+    width: 46rem;
+  }
+  .video-Title span{
+   display: flex;
+   align-items: center;
+  }
+  .video-Title svg{
+    padding-right: 10px;
+  }
+  .styles-module_blinkingCursor__yugAC.styles-module_blinking__9VXRT{
+    display: none;
+  }
+.Banner-video {
+   margin-top: 60px;
+   border-radius: 10px;
+  }
+  .Banner-video img{
+       width: -webkit-fill-available;
+    display: flex;
+  margin:0px auto;
+}
+
+@media only screen and (max-width: 1250px) {
+  .video-detailes{
+    padding-top: 30px;
+  }
+  .Banner-video img{
+    width: 95% ;
+  }
+}
+
+
+@media only screen and (max-width: 550px) {
+  .video-detailes{
+    padding-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 428px) {
+  .video-detailes{
+    padding-top: 30px;
+  }
+}
+
