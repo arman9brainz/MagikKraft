@@ -22,6 +22,7 @@
   padding:30px 35px;
 }
 button.accordion.active{
+  content: "\002D";
   font-weight: 600;
   border-bottom: none;
   border-bottom-right-radius: 0px;
@@ -30,10 +31,7 @@ button.accordion.active{
 .active, .accordion:hover {
   background: linear-gradient(80deg, #CE4DA4 0%, #8733FE 20%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  
 }
-
 .accordion:after {
   content: '\002B';
   color: #777;
@@ -41,13 +39,23 @@ button.accordion.active{
   margin-left: 5px;
   padding: 0px 5px;
   border-radius: 4px;
-  border:1px solid;
+  border: 1px solid;
 }
-
-.active:hover {
-  content: "\2212";
+.accordion.active:after {
+  content: '\2212';
 }
-
+.accordion:hover span{
+  background: rgb(35,219,164);
+  background: linear-gradient(81deg, #DE0243 0%, #8733FE 62%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.accordion.active span{
+  background: rgb(35,219,164);
+  background: linear-gradient(81deg, #DE0243 0%, #8733FE 62%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .panel {
   padding: 0 30px;
   font-size: 16px;
@@ -63,6 +71,8 @@ button.accordion.active{
   padding: 0px 50px 10px 10px;
 }
 
+/****************Media Query Started ******************* */
+
 @media only screen and (max-width: 412px) {
   .FAQs-accordion{
     flex-direction: column;
@@ -72,5 +82,21 @@ button.accordion.active{
   }
   .active.panel{
     max-height:520px !important;
+  }
+
+}
+@media only screen and (max-width: 452px) {
+  .FAQs-accordion{
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+
+  }
+  .active.panel{
+    max-height:520px !important;
+  }
+  .FAQs-accordion{
+    margin-left: 25px;
+    margin-right: 25px;
   }
 }

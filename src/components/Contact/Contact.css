@@ -2,37 +2,35 @@
   background-color: #1D1A27;
   position: relative;
 }
-
 .contact::after {
   position: absolute;
   top: 240px;
   right: 210px;
 }
-
 .contact::before {
   position: absolute;
   top: 340px;
   left: 210px;
 }
-
 .contact-title h1 {
   padding-top: 75px;
   font-size: 36px;
   text-align: center;
   margin-top: 0px;
 }
-
 .contact-title p {
   font-size: 16px;
   color: #808080;
   text-align: center;
 }
-
+.contact{
+  background-color: #1D1A27;
+  position: relative;
+}
 .contact-form {
   margin-top: 50px;
   padding-bottom: 75px;
 }
-
 .contact-form input {
   font-size: 16px;
   margin: 20px auto;
@@ -44,7 +42,6 @@
   display: flex;
   color: #FFFF;
 }
-
 .contact-form button {
   font-size: 18px;
   margin: 0px auto;
@@ -57,17 +54,36 @@
   justify-content: center;
   background: linear-gradient(80deg, #7353E5 0%, #CE4DA4 60%);
   color: white;
-
 }
 
+/****************Media Query Started ******************* */
 
-@media screen and (max-width:412px) {
+@media screen and (max-width:1000px) {
+.contact::after{
+ position: absolute;
+    top: 240px;
+    right: 50px !important;
+  }
+  .contact::before{
+    left: 50px !important;
+  
+  }
+}
+@media screen and (max-width:700px) {
+  .contact::after{
+    display: none;
+    }
+    .contact::before{
+     display: none;
+    }
+  }
+@media screen and (max-width:427px) {
   .contact-form input {
-    padding: 5px 40px 5px 25px;
+    padding: 5px 35px 5px 22px;
   }
 
   .contact-form button {
-    padding: 5px 100px;
+    padding: 5px 95px;
 
   }
 }

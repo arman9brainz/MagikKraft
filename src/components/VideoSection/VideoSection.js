@@ -5,8 +5,8 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 export default function VideoSection() {
   const [text] = useTypewriter({
     words: ["1. Water the red roses on the farm evenly from an elevation of 8 feet and provide notification when completed.",
-    "2. Monitor the car's progress through the winding mountain road by following it from behind at a height of 20 feet and a distance of 15 feet.",
-  "3. Keep track of the lead actor's movements during the chase sequence from the front, maintaining a distance of 10 feet and an altitude of 5 feet."],
+      "2. Monitor the car's progress through the winding mountain road by following it from behind at a height of 20 feet and a distance of 15 feet.",
+      "3. Keep track of the lead actor's movements during the chase sequence from the front, maintaining a distance of 10 feet and an altitude of 5 feet."],
     loop: true,
     typeSpeed: 20,
     deleteSpeed: 20,

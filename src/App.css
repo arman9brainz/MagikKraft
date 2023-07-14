@@ -8,6 +8,7 @@ body{
     font-family: 'Poppins', sans-serif;
     color: #ffff;
 }
+/****************Media Query Started ******************* */
 
 @media only screen and (max-width: 550px) {
   .nav{
